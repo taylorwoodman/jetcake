@@ -1,47 +1,59 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Switch
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
 import Login from "./components/login";
 import Profile from "./components/profile";
 import Signup from "./components/signup";
-import './App.css';
+import "./App.css";
 
-class App extends React.Component{
-  constructor(){
-    super()
+class App extends React.Component {
+  constructor() {
+    super();
 
     this.state = {
-      user: "",
-      authenticated: false
-    }
+      user: ""
+    };
   }
-  render(){
 
+  updateUser = user => {
+    this.setState({ user });
+  };
+
+  render() {
     return (
       <div className="App">
         <Router>
           <Switch>
-            <Route 
-            exact path="/"
-            render={<Home />}
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Home user={this.state.user} updateUser={this.updateUser} />
+              )}
             />
-            <Route path="/login"
-            render={<Login />}
+            <Route
+              exact
+              path="/login"
+              render={() => (
+                <Login user={this.state.user} updateUser={this.updateUser} />
+              )}
             />
-            <Route path="/signup"
-            render={<Signup />}
+            <Route
+              exact
+              path="/signup"
+              render={() => (
+                <Signup user={this.state.user} updateUser={this.updateUser} />
+              )}
             />
-            <Route path="/profile"
-            render={<Profile />}
+            <Route
+              exact
+              path="/profile"
+              render={() => (
+                <Profile user={this.state.user} updateUser={this.updateUser} />
+              )}
             />
           </Switch>
         </Router>
-        
       </div>
     );
   }
