@@ -122,21 +122,21 @@ class Signup extends React.Component {
             <option
               value={this.state.questionOne}
               name="questionOne"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your spouse's name?
             </option>
             <option
               value={this.state.questionTwo}
               name="questionTwo"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your name?
             </option>
             <option
               value={this.state.questionThree}
               name="questionThree"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your mom's name?
             </option>
@@ -153,21 +153,21 @@ class Signup extends React.Component {
             <option
               value={this.state.questionOne}
               name="questionOne"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your spouse's name?
             </option>
             <option
               value={this.state.questionTwo}
               name="questionTwo"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your name?
             </option>
             <option
               value={this.state.questionThree}
               name="questionThree"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your mom's name?
             </option>
@@ -184,21 +184,21 @@ class Signup extends React.Component {
             <option
               value={this.state.questionOne}
               name="questionOne"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your spouse's name?
             </option>
             <option
               value={this.state.questionTwo}
               name="questionTwo"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your name?
             </option>
             <option
               value={this.state.questionThree}
               name="questionThree"
-              onClick={e => this.setState({ [e.target.name]: e.target.value })}
+              onChange={this.handleInput}
             >
               What is your mom's name?
             </option>
