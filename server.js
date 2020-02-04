@@ -23,7 +23,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-app.use(cors({ credentials: true, origin: "*" }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
 app.get("/isAuth", (req, res) => res.send(!!req.session.user));
 

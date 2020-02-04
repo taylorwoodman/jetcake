@@ -19,10 +19,10 @@ class Login extends React.Component {
       };
 
       if (body.email && body.password) {
-        axios.post("/api/login", body).then(response => {
+        await axios.post("/api/login", body).then(response => {
+          this.props.updateUser(response.data);
           console.log(response.data);
 
-          this.props.updateUser(response.data);
           this.props.history.push("/profile");
         });
       } else {
